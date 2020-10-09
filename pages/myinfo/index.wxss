@@ -1,0 +1,19 @@
+
+.van-col-view{
+ 
+  background: white;
+}
+.van-col-grid{
+  margin-top: 10px;
+}
+.van-col-image{
+ 
+  text-align: center;
+
+}
+.myinfo-grid-item {
+  text-align: center;
+}
+.myinfo-grid-item p{
+  margin: 5px;
+}

@@ -1,0 +1,30 @@
+.conver-view-index{
+height: 100%;
+}
+.conver-view-today{
+
+  text-align: center;
+  background: white;
+  height: 300rpx;
+}
+
+.info-grid-show{
+  font-weight:bold;
+}
+.conver-view-clock{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  background: white;
+  height: 400rpx;
+  justify-content: center;
+}
+.conver-view-button{
+  display: flex;
+  align-items: center;
+  height: 200rpx;
+  background: white;
+  justify-content: center;
+}
+
+

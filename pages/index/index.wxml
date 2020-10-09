@@ -1,0 +1,52 @@
+
+<cover-view class="conver-view-index" >
+<cover-view class="conver-view-today">
+  <!-- 显示今日的信息-->
+  <van-col span="24" class="van-col-info" >
+  <van-col span="24">
+  <van-grid  column-num="3">
+  <van-grid-item  icon-color="#6699A1"   icon="flag-o" text="今日目标" />
+  <van-grid-item  icon-color="#6699A1"icon="passed"  text="已完成"/>
+  <van-grid-item  icon-color="#6699A1" icon="todo-list-o" text="下次提醒" />  
+</van-grid>
+<van-grid  column-num="3" class="info-grid-show">
+  <van-grid-item use-slot>
+    8
+  </van-grid-item>
+  <van-grid-item use-slot>
+    3
+  </van-grid-item>
+  <van-grid-item use-slot>
+    暂未开通
+  </van-grid-item>
+</van-grid>
+</van-col>
+  </van-col>
+</cover-view >
+  <!-- 打卡按钮区-->
+
+    <cover-view class="conver-view-clock">
+  <!-- 进度-->
+      <van-col span="24"  >
+      
+        <van-circle layer-color="#F7EED6"  stroke-width="10" value="{{ value }}" color="#6699A1" text="{{ value }}%"  size="200" />
+  
+      </van-col>
+    </cover-view>
+      <cover-view class="conver-view-button">
+      <van-col span="24" class="van-col-button" >
+        <van-button icon="success" round type="primary" bind:click="onClick" color="#6699A1">喝水</van-button>
+    </van-col>
+
+    </cover-view>
+
+    <van-toast id="van-toast" />
+
+    <van-overlay show="{{ show }}" bind:click="onClickHide">
+  <view class="wrapper">
+    <view class="block" catch:tap="noop" />
+  </view>
+</van-overlay>
+</cover-view>
+
+
