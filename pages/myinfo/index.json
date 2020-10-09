@@ -1,14 +1,14 @@
 {
   "usingComponents": {
-    "van-row": "@vant/weapp/row/index",
-    "van-col": "@vant/weapp/col/index",
-    "van-grid": "@vant/weapp/grid/index",
-    "van-grid-item": "@vant/weapp/grid-item/index",
-    "van-image": "@vant/weapp/image/index",
-    "van-action-sheet": "@vant/weapp/action-sheet/index",
-    "van-cell": "@vant/weapp/cell/index",
-    "van-cell-group": "@vant/weapp/cell-group/index",
-    "van-popup": "@vant/weapp/popup/index",
-    "van-picker": "@vant/weapp/picker/index"
+    "van-row": "/wxcomponents/vant/dist/row/index",
+    "van-col": "/wxcomponents/vant/dist/col/index",
+    "van-grid": "/wxcomponents/vant/dist/grid/index",
+    "van-grid-item": "/wxcomponents/vant/dist/grid-item/index",
+    "van-image": "/wxcomponents/vant/dist/image/index",
+    "van-action-sheet": "/wxcomponents/vant/dist/action-sheet/index",
+    "van-cell": "/wxcomponents/vant/dist/cell/index",
+    "van-cell-group": "/wxcomponents/vant/dist/cell-group/index",
+    "van-popup": "/wxcomponents/vant/dist/popup/index",
+    "van-picker": "/wxcomponents/vant/dist/picker/index"
   }
 }

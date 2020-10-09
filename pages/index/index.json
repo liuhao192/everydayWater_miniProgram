@@ -1,14 +1,13 @@
 {
   "component": true,
   "usingComponents": {
-    "van-row": "@vant/weapp/row/index",
-    "van-col": "@vant/weapp/col/index",
-    "van-grid": "@vant/weapp/grid/index",
-    "van-grid-item": "@vant/weapp/grid-item/index",
-    "van-steps": "@vant/weapp/steps/index",
-    "van-button": "@vant/weapp/button/index",
-    "van-circle": "@vant/weapp/circle/index",
-    "van-overlay": "@vant/weapp/overlay/index",
-    "van-toast": "@vant/weapp/toast/index"
+    "van-row": "/wxcomponents/vant/dist/row/index",
+    "van-col": "/wxcomponents/vant/dist/col/index",
+    "van-grid": "/wxcomponents/vant/dist/grid/index",
+    "van-grid-item": "/wxcomponents/vant/dist/grid-item/index",
+    "van-steps": "/wxcomponents/vant/dist/steps/index",
+    "van-button": "/wxcomponents/vant/dist/button/index",
+    "van-circle": "/wxcomponents/vant/dist/circle/index",
+    "van-overlay": "/wxcomponents/vant/dist/overlay/index"
   }
 }
