@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "van-steps": "/wxcomponents/vant/dist/steps/index"
+    "van-steps": "/wxcomponents/vant/dist/steps/index",
+    "van-empty": "/wxcomponents/vant/dist/empty/index"
   }
 }

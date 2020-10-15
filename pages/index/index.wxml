@@ -1,8 +1,11 @@
 
-<cover-view class="conver-view-index" >
-<cover-view class="conver-view-today">
+
+
+
   <!-- 显示今日的信息-->
-  <van-col span="24" class="van-col-info" >
+<view class="index-today" >
+
+  <van-row>
   <van-col span="24">
   <van-grid  column-num="3">
   <van-grid-item  icon-color="#6699A1"   icon="flag-o" text="今日目标" />
@@ -11,42 +14,48 @@
 </van-grid>
 <van-grid  column-num="3" class="info-grid-show">
   <van-grid-item use-slot>
-    8
+    <text >{{goalNum}}</text>
   </van-grid-item>
   <van-grid-item use-slot>
-    3
+    <text >{{completedNum}}</text>
   </van-grid-item>
   <van-grid-item use-slot>
     暂未开通
   </van-grid-item>
 </van-grid>
 </van-col>
-  </van-col>
-</cover-view >
+</van-row>
+</view>
+
   <!-- 打卡按钮区-->
 
-    <cover-view class="conver-view-clock">
+
   <!-- 进度-->
-      <van-col span="24"  >
-      
+  <view class="index-click">
+    <van-row>
+      <van-col span="24" class="van-col-circle">
+        <van-grid  column-num="1" border="{{ false }}">
+          <van-grid-item use-slot>
         <van-circle layer-color="#F7EED6"  stroke-width="10" value="{{ value }}" color="#6699A1" text="{{ value }}%"  size="200" />
-  
+      </van-grid-item>
+      </van-grid>
       </van-col>
-    </cover-view>
-      <cover-view class="conver-view-button">
+
       <van-col span="24" class="van-col-button" >
-        <van-button icon="success" round type="primary" bind:click="onClick" color="#6699A1">喝水</van-button>
+        <van-grid  column-num="1" border="{{ false }}">
+          <van-grid-item use-slot>
+        <van-button  round type="primary" bind:click="onClick" color="#6699A1">+1</van-button>
+      </van-grid-item>
+      </van-grid>
     </van-col>
-
-    </cover-view>
-
-    <van-toast id="van-toast" />
-
-    <van-overlay show="{{ show }}" bind:click="onClickHide">
-  <view class="wrapper">
-    <view class="block" catch:tap="noop" />
+    
+  </van-row>
+  <van-overlay show="{{ show }}" bind:click="onClickHide" />
   </view>
-</van-overlay>
-</cover-view>
+
+
+
+  
+
 
 

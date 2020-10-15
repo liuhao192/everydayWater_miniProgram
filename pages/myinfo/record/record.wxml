@@ -1,9 +1,12 @@
 
-<cover-view  >
+<view wx:if="{{isHide}}">
+  <van-empty description="暂无记录" />
+</view>
+<view wx:else>
   <van-steps
   steps="{{ steps }}"
   active="{{ active }}"
   direction="vertical"
   active-color="#6699A1"
 />
-</cover-view>
+</view>

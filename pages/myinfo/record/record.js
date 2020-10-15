@@ -1,32 +1,18 @@
 // pages/myinfo/record.js
+
+const comm = require('../../../manage.js')
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    steps: [
-      {
-        text: '2020-10-09',
-        desc: '描述信息',
-        activeIcon: 'award-o'
-      },
-      {
-        text: '2020-10-09',
-        desc: '描述信息',
-        activeIcon: 'award-o'
-      },
-      {
-        text: '2020-10-09',
-        desc: '描述信息',
-        activeIcon: 'award-o'
-      },
-      {
-        text: '2020-10-09',
-        desc: '描述信息',
-        activeIcon: 'award-o'
-      },
-    ]
+    url: {
+      log: "/api/water/log/openid/"
+    },
+    isHide: true,
+    steps: []
   },
 
   /**
@@ -47,6 +33,28 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    const url = this.data.url.log + app.globalData.openId;
+    let that = this;
+    comm.getAction(url, "", '', function (res) {
+      console.log("用户日志信息信息", res);
+      if (res.success && res.body.data.length>0) {
+        let record = []
+        res.body.data.forEach(item => {
+          console.log(item.drinkTime);
+          record.push({
+            text: item.drinkTime,
+            inactiveIcon: 'award-o',
+          })
+        })
+        that.setData({
+          steps: record,
+          isHide: false
+        })
+      }
+    }, function (res) {
+      console.log(res)
+    })
+
 
   },
 

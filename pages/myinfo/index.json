@@ -9,6 +9,7 @@
     "van-cell": "/wxcomponents/vant/dist/cell/index",
     "van-cell-group": "/wxcomponents/vant/dist/cell-group/index",
     "van-popup": "/wxcomponents/vant/dist/popup/index",
-    "van-picker": "/wxcomponents/vant/dist/picker/index"
+    "van-picker": "/wxcomponents/vant/dist/picker/index",
+    "van-empty": "/wxcomponents/vant/dist/empty/index"
   }
 }

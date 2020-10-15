@@ -1,41 +1,46 @@
 
-<cover-view  >
-<cover-view >
+
     <!-- 显示我的信息-->
-  <cover-view class="van-col-view" >
+  <view class="van-col-view"  >
+    
+    <van-grid  column-num="1" border="{{ false }}" >
+      <van-row >
   <van-col span="6"  class="van-col-image" >
-    <van-image 
-  round
-  width="80px"
-  height="80px"
-  src="https://img.yzcdn.cn/vant/cat.jpeg"
-/>
+
+      <view class="userinfo-avatar">
+    <open-data  type="userAvatarUrl"></open-data>
+  </view>
+  
 </van-col>
 
 
 <van-col span="18" >
-  <van-grid  column-num="3" class="myinfo-grid-item">
+  <van-grid  column-num="3" class="myinfo-grid-item" border="{{ false }}">
   <van-grid-item use-slot >
-    8
-    <p>喝水天数</p>
+    <text>{{ drinkDay }}</text>
+    <text>喝水天数</text>
   </van-grid-item>
   <van-grid-item use-slot>
-    3
-    <p>喝水次数</p>
+  
+    <text>{{ drinkNum }}</text>
+    <text>喝水次数</text>
   </van-grid-item>
   <van-grid-item use-slot>
-    12
-    <p>达标天数</p>
+  
+    <text>{{ standardDay }}</text>
+    <text>达标天数</text>
   </van-grid-item>
 </van-grid>
 
 </van-col>
-</cover-view>
+</van-row>
+</van-grid>
 
-</cover-view >
+</view >
+<view  style=" margin-top: 10rpx;">
   <!-- 历史信息-->
-  <cover-view  class="van-col-grid">
-    <van-col span="24" >
+  <van-row >
+    <van-col span="24"  >
 
       <van-cell
   is-link
@@ -49,21 +54,29 @@
   link-type="navigateTo"
   url="../myinfo/record/record"
 />
+
+<van-cell
+  is-link
+  title="订阅信息"
+  link-type="navigateTo"
+  bind:click="orderMenu"
+/>
+
 <van-popup show="{{ show }}" bind:close="onClose"  position="bottom" >
 
   <van-picker
   show-toolbar
   title="设置目标"
   columns="{{ columns }}"
+  default-index="{{defaultIndex}}"
   bind:cancel="onCancel"
   bind:confirm="onConfirm"
 />
 </van-popup>
 
     </van-col>
-    
-    </cover-view>
-</cover-view>
+  </van-row>
+  </view >
 
 
 
